@@ -1,0 +1,37 @@
+{% extends 'scoop/layouts/base.html' %}
+
+{% block content %}
+
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                {% if products.tag %}
+                                    <label class="product-viewtag">{{ products.tag }}</label>
+                                {% endif %}
+                                <img src="{{ products.product_image.url }}" class="w-100" alt="image">
+                            </div>
+                            <div class="col-md-8">
+                                <h2 class="mb-0">
+                                    {{ products.name }}
+                                </h2>
+                                <hr>
+                                <label class="fw-bold">Цена: $ {{ products.price }}</label>
+                                <hr>
+                                <h5>
+                                    <label class="fw-bold">Описание товара:  {{ products.description }}</label>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %} 

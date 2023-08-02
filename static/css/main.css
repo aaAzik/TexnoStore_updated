@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+.centerr{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color:darkgoldenrod;
+}
+
+.ortasi{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: darkorange;
+}
+
+.ortalawi{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color:goldenrod;
+}
+
+.TexnoStore {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: black;
+}
