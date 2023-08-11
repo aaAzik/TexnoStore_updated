@@ -1,0 +1,11 @@
+{% extends 'scoop/layouts/base.html' %}
+{% block title %}
+Logout page
+{% endblock %}
+
+{% block content %}
+<p id="logoutqo">
+    Вы успешно вышли из своего аккаунта. 
+    Вы можете войти <a href="{% url 'login' %}">заново</a>
+</p>
+{% endblock %}

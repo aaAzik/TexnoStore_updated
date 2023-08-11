@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'account.apps.AccountConfig',
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'scoop'
+    'scoop.apps.ScoopConfig',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +130,9 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
+LOGOUT_URL  = 'logout'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

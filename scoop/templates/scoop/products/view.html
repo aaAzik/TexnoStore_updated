@@ -21,10 +21,15 @@
                                 </h2>
                                 <hr>
                                 <label class="fw-bold">Цена: $ {{ products.price }}</label>
+                                <br>
+                                <label class="fw-bold">Автор: {{ products.author.request.user.first_name|default:request.user.username }}</label>
                                 <hr>
                                 <h5>
                                     <label class="fw-bold">Описание товара:  {{ products.description }}</label>
                                 </h5>
+                                <a href="{% url 'sale_delete' products.pk %}">Delete</a>
+                                |
+                                <a href="{% url 'sale_update' products.pk %}">Update</a>
                             </div>
                         </div>
                     </div>
